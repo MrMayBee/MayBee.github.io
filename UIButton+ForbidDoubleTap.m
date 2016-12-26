@@ -39,11 +39,7 @@ static const char *UIControl_ignoreEvent = "UIControl_ignoreEvent";
     if (self.MB_ignoreEvent) return;
     if (self.MB_acceptEventInterval > 0) {
         self.MB_ignoreEvent = YES;
-//        [self performSelector:@selector(setMB_ignoreEvent:) withObject:@(NO) afterDelay:self.MB_acceptEventInterval];
         [self performSelector:@selector(changeIgnoreEvent) withObject:nil afterDelay:self.MB_acceptEventInterval];
-        
-//        self.userInteractionEnabled = NO;
-//        [self performSelector:@selector(setUserInteractionEnabled:) withObject:@(YES) afterDelay:self.MB_acceptEventInterval];
     }
     [self _MB_sendAction:selector to:target forEvent:event];
 }
