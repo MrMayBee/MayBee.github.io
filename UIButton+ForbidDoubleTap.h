@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
-@interface UIControl (ForbidDoubleTap)
+@interface UIButton (ForbidDoubleTap)
 @property (nonatomic, assign) NSTimeInterval MB_acceptEventInterval;
 @property (nonatomic, assign) BOOL MB_ignoreEvent;
 @end
